@@ -1,0 +1,181 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mitul/BloggerSpot/Application/Application.csproj": {}
+  },
+  "projects": {
+    "/home/mitul/BloggerSpot/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mitul/BloggerSpot/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/home/mitul/BloggerSpot/Application/Application.csproj",
+        "packagesPath": "/home/mitul/.nuget/packages/",
+        "outputPath": "/home/mitul/BloggerSpot/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mitul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/mitul/BloggerSpot/Domain/Domain.csproj": {
+                "projectPath": "/home/mitul/BloggerSpot/Domain/Domain.csproj"
+              },
+              "/home/mitul/BloggerSpot/Presistence/Presistence.csproj": {
+                "projectPath": "/home/mitul/BloggerSpot/Presistence/Presistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mitul/BloggerSpot/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mitul/BloggerSpot/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/mitul/BloggerSpot/Domain/Domain.csproj",
+        "packagesPath": "/home/mitul/.nuget/packages/",
+        "outputPath": "/home/mitul/BloggerSpot/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mitul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mitul/BloggerSpot/Presistence/Presistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mitul/BloggerSpot/Presistence/Presistence.csproj",
+        "projectName": "Presistence",
+        "projectPath": "/home/mitul/BloggerSpot/Presistence/Presistence.csproj",
+        "packagesPath": "/home/mitul/.nuget/packages/",
+        "outputPath": "/home/mitul/BloggerSpot/Presistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mitul/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/mitul/BloggerSpot/Domain/Domain.csproj": {
+                "projectPath": "/home/mitul/BloggerSpot/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
