@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MNBTWPcrrynD/aRAReRMnjczM2jleIFfx2hIA/7y/n1u8daT6qKCl6TyInND1WPB22JUtVDHdYGsqrizXXuqjg==",
+  "dgSpecHash": "z+4xGYcCfat0eeWw/mncG6uOQQe181KdP1Aw5fxL8iKQnoAxunvER+pmv+4UuDiDxN5U4idP8EPgiZcvvqqAqw==",
   "success": true,
   "projectFilePath": "/home/mitul/BloggerSpot/Application/Application.csproj",
   "expectedPackageFiles": [
+    "/home/mitul/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
+    "/home/mitul/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "/home/mitul/.nuget/packages/microsoft.data.sqlite.core/5.0.5/microsoft.data.sqlite.core.5.0.5.nupkg.sha512",
     "/home/mitul/.nuget/packages/microsoft.dotnet.platformabstractions/3.1.6/microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "/home/mitul/.nuget/packages/microsoft.entityframeworkcore/5.0.5/microsoft.entityframeworkcore.5.0.5.nupkg.sha512",
