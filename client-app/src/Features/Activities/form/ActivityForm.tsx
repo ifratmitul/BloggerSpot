@@ -5,16 +5,17 @@ import { Activity } from '../../../App/Models/activity'
 interface Props {
     activity : Activity | undefined;
     closeForm : () => void;
+    createOrEdit : (activity : any) => void;
 }
 
-export default function ActivityForm({activity : selectedActivity, closeForm} : Props) {
+export default function ActivityForm({activity : selectedActivity, closeForm, createOrEdit} : Props) {
 
     const initialState = selectedActivity ?? {
         id: '',
         title: '',
-        category: '',
-        description : '',
         date: '',
+        description : '',
+        category: '',        
         city: '',
         venue: ''
     }
@@ -24,6 +25,7 @@ export default function ActivityForm({activity : selectedActivity, closeForm} : 
     
     function handleSubmit() {
         console.log(activity);
+        createOrEdit(activity);
     }
 
     function handleInputChang(event : ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
