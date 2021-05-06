@@ -4,7 +4,7 @@ import { Activity } from '../../../../App/Models/activity'
 interface Props {
     activity : Activity;
     cancelSelectActivity : () => void;
-    openForm : (id : String) => void;
+    openForm : (id : string) => void;
 
 }
 export default function ActivityDetails({activity, cancelSelectActivity, openForm} : Props) {

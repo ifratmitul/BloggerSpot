@@ -8,22 +8,25 @@ import ActivityDetails from './details/ActivityDetails';
 interface Props {
     activities : Activity [];
     selectedActivity : Activity | undefined;
-    selectActivity : (id:String) => void;
+    selectActivity : (id:string) => void;
     cancelSelectActivity : () => void;
     editMode : boolean;
-    openForm : (id : String) => void;
+    openForm : (id : string) => void;
     closeForm : () =>void ;
     createOrEdit : (activity: Activity) => void;
-    deleteActivity : (id: String) => void;
+    deleteActivity : (id: string) => void;
+    submitting: boolean;
 }
 
 export default function ActivityDashboard(
-    {activities, selectActivity, selectedActivity, cancelSelectActivity, editMode,openForm, closeForm, createOrEdit, deleteActivity} : Props) {
+    {activities, selectActivity, selectedActivity, cancelSelectActivity, editMode,openForm, closeForm, createOrEdit, deleteActivity, submitting} : Props) {
     return (
         <Grid>
 
             <Grid.Column width = '10'>
-                <ActivityList activities = {activities} selectActivity = {selectActivity} deleteActivity = {deleteActivity}/>
+                <ActivityList activities = {activities} selectActivity = {selectActivity}
+                 deleteActivity = {deleteActivity}
+                 submitting = {submitting}/>
             </Grid.Column>
 
             <Grid.Column width = '6'>
@@ -33,7 +36,11 @@ export default function ActivityDashboard(
                 cancelSelectActivity = {cancelSelectActivity}
                 openForm = {openForm}/> }
                 { editMode && 
-                <ActivityForm activity = {selectedActivity} closeForm = {closeForm} createOrEdit = {createOrEdit}/> }
+                <ActivityForm activity = {selectedActivity}
+                 closeForm = {closeForm} 
+                 createOrEdit = {createOrEdit}
+                 submitting = {submitting}
+                 /> }
             </Grid.Column>
             
         </Grid>
