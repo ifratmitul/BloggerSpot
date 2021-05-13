@@ -1,7 +1,7 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import agents from "../api/agent";
 import { Activity } from "../Models/activity";
-import { v4 as uuid } from "uuid";
+
 export default class ActivityStore {
   activityRegistry = new Map<string, Activity>();
   selectedActivity: Activity | undefined = undefined;
@@ -20,6 +20,7 @@ export default class ActivityStore {
   }
 
   loadActivities = async () => {
+    this.loadingInitial = true;
     try {
       const activities = await agents.Activities.list();
 
@@ -39,26 +40,9 @@ export default class ActivityStore {
     this.loadingInitial = state;
   };
 
-  selectActivity = (id: string) => {
-    this.selectedActivity = this.activityRegistry.get(id);
-  };
-
-  cancelSelectedActivity = () => {
-    this.selectedActivity = undefined;
-  };
-
-  openForm = (id?: string) => {
-    id ? this.selectActivity(id) : this.cancelSelectedActivity();
-    this.editMode = true;
-  };
-
-  closeForm = () => {
-    this.editMode = false;
-  };
-
   createActivity = async (activity: Activity) => {
     this.loading = true;
-    activity.id = uuid();
+
     try {
       await agents.Activities.create(activity);
       runInAction(() => {
@@ -100,7 +84,6 @@ export default class ActivityStore {
       await agents.Activities.delete(id);
       runInAction(() => {
         this.activityRegistry.delete(id);
-        if (this.selectedActivity?.id === id) this.cancelSelectedActivity();
         this.loading = false;
       });
     } catch (error) {
@@ -115,13 +98,20 @@ export default class ActivityStore {
     let activity = this.getActivity(id);
     if (activity) {
       this.selectedActivity = activity;
+      return activity;
     } else {
       this.loading = true;
       try {
         activity = await agents.Activities.details(id);
         this.setActivity(activity);
+        runInAction(() => {
+          this.selectedActivity = activity;
+        });
+        this.setLoadingInitial(false);
+        return activity;
       } catch (error) {
         console.log(error);
+        this.setLoadingInitial(false);
       }
     }
   };
