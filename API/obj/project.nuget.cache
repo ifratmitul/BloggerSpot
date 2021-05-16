@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "ekYE+CDTcGXXXyFxqpQgB1BkfV1kv+DhsTzLbk/BaNODXpaD7N7OEL2bYfXbVcJdkBSZHjPbbrgNQ7m+Hg0x4g==",
+  "dgSpecHash": "yYMedwn8rICcyzLE45sb//H86mrdeGB/gmqpgMz+5T3n6l3UHiRqTC5L5yMSbYNLGGLd/arDK6VLxmgFVGTHsQ==",
   "success": true,
   "projectFilePath": "/home/mitul/BloggerSpot/API/API.csproj",
   "expectedPackageFiles": [
     "/home/mitul/.nuget/packages/automapper/10.1.1/automapper.10.1.1.nupkg.sha512",
     "/home/mitul/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/8.1.1/automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "/home/mitul/.nuget/packages/fluentvalidation/10.1.0/fluentvalidation.10.1.0.nupkg.sha512",
+    "/home/mitul/.nuget/packages/fluentvalidation.aspnetcore/10.1.0/fluentvalidation.aspnetcore.10.1.0.nupkg.sha512",
+    "/home/mitul/.nuget/packages/fluentvalidation.dependencyinjectionextensions/10.1.0/fluentvalidation.dependencyinjectionextensions.10.1.0.nupkg.sha512",
     "/home/mitul/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/mitul/.nuget/packages/mediatr/9.0.0/mediatr.9.0.0.nupkg.sha512",
     "/home/mitul/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/9.0.0/mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",

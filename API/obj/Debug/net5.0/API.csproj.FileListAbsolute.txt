@@ -66,3 +66,6 @@
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/AutoMapper.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/FluentValidation.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/FluentValidation.AspNetCore.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/FluentValidation.DependencyInjectionExtensions.dll
