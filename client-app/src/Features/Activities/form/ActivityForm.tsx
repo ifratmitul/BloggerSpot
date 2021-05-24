@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Segment } from "semantic-ui-react";
+import { Button, Header, Segment } from "semantic-ui-react";
 import { useStore } from "../../../App/stores/store";
 import { observer } from "mobx-react-lite";
 import { useHistory, useParams } from "react-router";
@@ -12,6 +12,8 @@ import MyTextArea from "../../../App/common/form/MyTextArea";
 import MySelectInput from "../../../App/common/form/MySelectInput";
 import { categoryOptions } from "../../../App/common/options/categoryOptions";
 import MyDateInput from "../../../App/common/form/MyDateInput";
+import { Activity } from "../../../App/Models/activity";
+import { v4 as uuid } from "uuid";
 
 export default observer(function ActivityForm() {
   const history = useHistory();
@@ -20,10 +22,10 @@ export default observer(function ActivityForm() {
     activityStore;
 
   const { id } = useParams<{ id: string }>();
-  const [activity, setActivity] = useState({
+  const [activity, setActivity] = useState<Activity>({
     id: "",
     title: "",
-    date: "",
+    date: null,
     description: "",
     category: "",
     city: "",
@@ -34,6 +36,7 @@ export default observer(function ActivityForm() {
     title: yup.string().required("There must be a title"),
     description: yup.string().required("There must be a description"),
     city: yup.string().required("There must be a city"),
+    date: yup.string().required("Date is required"),
     venue: yup.string().required("There must be a venue"),
     category: yup.string().required("There must be a category"),
   });
@@ -42,40 +45,34 @@ export default observer(function ActivityForm() {
     if (id) loadActivity(id).then((activity) => setActivity(activity!));
   }, [id, loadActivity]);
 
-  // function handleSubmit() {
-  //   //console.log(activity);
-  //   if (activity.id.length === 0) {
-  //     let newActivity = {
-  //       ...activity,
-  //       id: uuid(),
-  //     };
-  //     createActivity(newActivity).then(() =>
-  //       history.push(`/activities/${newActivity.id}`)
-  //     );
-  //   } else {
-  //     updateActivity(activity).then(() =>
-  //       history.push(`/activities/${activity.id}`)
-  //     );
-  //   }
-  // }
+  function handleFormSubmit(activity: Activity) {
+    if (activity.id.length === 0) {
+      let newActivity = {
+        ...activity,
+        id: uuid(),
+      };
+      createActivity(newActivity).then(() =>
+        history.push(`/activities/${newActivity.id}`)
+      );
+    } else {
+      updateActivity(activity).then(() =>
+        history.push(`/activities/${activity.id}`)
+      );
+    }
+  }
 
-  // function handleInputChang(
-  //   event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  // ) {
-  //   const { name, value } = event.target;
-  //   setActivity({ ...activity, [name]: value });
-  // }
   if (loadingInitial)
     return <LoadingComponent content="Loading Activity ....." />;
   return (
     <Segment clearing>
+      <Header color="teal" content="Activity Details" />
       <Formik
         validationSchema={validationSchema}
         enableReinitialize
         initialValues={activity}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={(values) => handleFormSubmit(values)}
       >
-        {({ values: activity, handleChange, handleSubmit }) => (
+        {({ values: activity, isSubmitting, isValid, handleSubmit, dirty }) => (
           <Form className="ui form" onSubmit={handleSubmit} autoComplete="off">
             <MyTextInput name="title" placeholder="Title" />
             <MyTextArea rows={3} name="description" placeholder="Description" />
@@ -91,10 +88,12 @@ export default observer(function ActivityForm() {
               timeCaption="time"
               dateFormat="MMMM d, yyyy h:mm aa"
             />
+            <Header color="teal" content="Location Details" />
             <MyTextInput name="city" placeholder="City" />
             <MyTextInput name="venue" placeholder="Venue" />
             <Button
               // loading={loading}
+              disabled={isSubmitting || !isValid || !dirty}
               floated="right"
               positive
               type="submit"
