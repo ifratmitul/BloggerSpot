@@ -17,7 +17,6 @@
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Application.pdb
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Domain.pdb
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Presistence.pdb
-/home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.csprojAssemblyReference.cache
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.GeneratedMSBuildEditorConfig.editorconfig
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.AssemblyInfoInputs.cache
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.AssemblyInfo.cs
@@ -74,3 +73,4 @@
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.Extensions.Identity.Core.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.Extensions.Identity.Stores.dll
+/home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.csproj.AssemblyReference.cache
