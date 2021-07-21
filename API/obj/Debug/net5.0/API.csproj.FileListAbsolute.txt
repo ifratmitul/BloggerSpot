@@ -74,3 +74,10 @@
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.Extensions.Identity.Core.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.Extensions.Identity.Stores.dll
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.csproj.AssemblyReference.cache
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
