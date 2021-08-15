@@ -757,6 +757,19 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Infrastructure.dll": {}
+        }
+      },
       "Presistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2003,6 +2016,11 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
+    "Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Infrastructure.csproj"
+    },
     "Presistence/1.0.0": {
       "type": "project",
       "path": "../Presistence/Presistence.csproj",
@@ -2012,6 +2030,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Application >= 1.0.0",
+      "Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.8",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.5",
       "Microsoft.IdentityModel.Tokens >= 6.11.1",
@@ -2045,6 +2064,9 @@
           "projectReferences": {
             "/home/mitul/BloggerSpot/Application/Application.csproj": {
               "projectPath": "/home/mitul/BloggerSpot/Application/Application.csproj"
+            },
+            "/home/mitul/BloggerSpot/Infrastructure/Infrastructure.csproj": {
+              "projectPath": "/home/mitul/BloggerSpot/Infrastructure/Infrastructure.csproj"
             }
           }
         }
@@ -2096,7 +2118,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

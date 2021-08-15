@@ -81,3 +81,5 @@
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Infrastructure.dll
+/home/mitul/BloggerSpot/API/bin/Debug/net5.0/Infrastructure.pdb
