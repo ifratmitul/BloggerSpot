@@ -31,7 +31,7 @@ namespace Application.Activities
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var activity = await _context.Activities
-                    .Include(a => a.attendess).ThenInclude(u => u.AppUser)
+                    .Include(a => a.Attendees).ThenInclude(u => u.AppUser)
                     .SingleOrDefaultAsync(x => x.Id == request.Id);
 
                 if (activity == null) return null;
@@ -41,15 +41,15 @@ namespace Application.Activities
 
                 if (user == null) return null;
 
-                var hostUsername = activity.attendess.FirstOrDefault(x => x.isHost)?.AppUser?.UserName;
+                var hostUsername = activity.Attendees.FirstOrDefault(x => x.IsHost)?.AppUser?.UserName;
 
-                var attendance = activity.attendess.FirstOrDefault(x => x.AppUser.UserName == user.UserName);
+                var attendance = activity.Attendees.FirstOrDefault(x => x.AppUser.UserName == user.UserName);
 
                 if (attendance != null && hostUsername == user.UserName)
                     activity.IsCancelled = !activity.IsCancelled;
 
                 if (attendance != null && hostUsername != user.UserName)
-                    activity.attendess.Remove(attendance);
+                    activity.Attendees.Remove(attendance);
 
                 if (attendance == null)
                 {
@@ -57,10 +57,10 @@ namespace Application.Activities
                     {
                         AppUser = user,
                         Activity = activity,
-                        isHost = false
+                        IsHost = false
                     };
 
-                    activity.attendess.Add(attendance);
+                    activity.Attendees.Add(attendance);
                 }
 
                 var result = await _context.SaveChangesAsync() > 0;

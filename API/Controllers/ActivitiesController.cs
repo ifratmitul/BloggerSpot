@@ -1,6 +1,5 @@
 
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.Activities;
 using Domain;
@@ -35,13 +34,14 @@ namespace API.Controllers
 
         }
 
+        [Authorize(Policy = "IsActivityHost")]
         [HttpPut("{id}")]
         public async Task<IActionResult> EditActivity(Guid id, Activity activity)
         {
             activity.Id = id;
             return Ok(await Mediator.Send(new Edit.Command { Activity = activity }));
         }
-
+        [Authorize(Policy = "IsActivityHost")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteActivity(Guid id)
         {

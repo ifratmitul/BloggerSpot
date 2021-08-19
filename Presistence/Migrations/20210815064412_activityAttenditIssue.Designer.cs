@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Presistence;
 
 namespace Presistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210815064412_activityAttenditIssue")]
+    partial class activityAttenditIssue
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,7 +58,7 @@ namespace Presistence.Migrations
                     b.Property<Guid>("ActivityId")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("IsHost")
+                    b.Property<bool>("isHost")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("AppUserId", "ActivityId");
@@ -267,7 +269,7 @@ namespace Presistence.Migrations
             modelBuilder.Entity("Domain.ActivityAttendee", b =>
                 {
                     b.HasOne("Domain.Activity", "Activity")
-                        .WithMany("Attendees")
+                        .WithMany("attendess")
                         .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -336,7 +338,7 @@ namespace Presistence.Migrations
 
             modelBuilder.Entity("Domain.Activity", b =>
                 {
-                    b.Navigation("Attendees");
+                    b.Navigation("attendess");
                 });
 
             modelBuilder.Entity("Domain.AppUser", b =>

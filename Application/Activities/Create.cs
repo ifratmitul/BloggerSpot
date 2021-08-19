@@ -45,9 +45,9 @@ namespace Application.Activities
                 {
                     AppUser = user,
                     Activity = request.Activity,
-                    isHost = true
+                    IsHost = true
                 };
-                request.Activity.attendess.Add(attendee);
+                request.Activity.Attendees.Add(attendee);
 
                 _context.Activities.Add(request.Activity);
                 var result = await _context.SaveChangesAsync() > 0;
