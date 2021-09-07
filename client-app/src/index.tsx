@@ -9,7 +9,7 @@ import { store, StoreContext } from "./App/stores/store";
 import { Router } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import "react-datepicker/dist/react-datepicker.css";
-
+import "./index.css";
 export const history = createBrowserHistory();
 
 ReactDOM.render(
