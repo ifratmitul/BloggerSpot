@@ -61,8 +61,7 @@ export default observer(function ActivityForm() {
     }
   }
 
-  if (loadingInitial)
-    return <LoadingComponent content="Loading Activity ....." />;
+  if (loadingInitial) return <LoadingComponent />;
   return (
     <Segment clearing>
       <Header color="teal" content="Activity Details" />
