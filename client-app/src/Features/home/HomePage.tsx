@@ -1,9 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
-
 import { Button, Container, Header, Image, Segment } from "semantic-ui-react";
 import { useStore } from "../../App/stores/store";
-import LoginForm from "../users/LoginForm";
+import RegisterForm from "../users/RegisterForm";
 
 export default function HomePage() {
   const { userStore, modalStore } = useStore();
@@ -32,7 +30,7 @@ export default function HomePage() {
               Login to see Activities
             </Button>
             <Button
-              onClick={() => modalStore.openModal(<LoginForm />)}
+              onClick={() => modalStore.openModal(<RegisterForm />)}
               size="huge"
               inverted
             >

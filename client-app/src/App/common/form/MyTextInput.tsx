@@ -13,7 +13,7 @@ export default function MyTextInput(props: Props) {
   const [field, meta] = useField(props.name);
   return (
     <div className="mb-4">
-      <label className="block text-grey-darker text-lg font-bold mb-2">
+      <label className="block text-grey-darker text-lg text-left font-bold mb-2">
         {props.label}
       </label>
       <input
@@ -22,7 +22,14 @@ export default function MyTextInput(props: Props) {
         {...props}
       />
       {meta.touched && meta.error ? (
-        <label className="">{meta.error}</label>
+        <div
+          className="bg-red-100 border-l-4 border-red-500 text-orange-700 p-2 capitalize"
+          role="alert"
+        >
+          <p className="font-bold text-sm text-left text-orange-700">
+            {meta.error}
+          </p>
+        </div>
       ) : null}
     </div>
   );

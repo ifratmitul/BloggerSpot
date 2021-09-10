@@ -34,7 +34,11 @@ export default observer(function LoginForm() {
           />
           <ErrorMessage
             name="error"
-            render={() => <label>{errors.error}</label>}
+            render={() => (
+              <label className="text-sm font-bold text-red-500 mb-1">
+                {errors.error}
+              </label>
+            )}
           />
           <div className="flex flex-col items-center self-around justify-around sm:flex-row sm:justify-between">
             <button
