@@ -7,29 +7,22 @@ interface Props {
 
 export default function ValidationErrors({ errors }: Props) {
   return (
-    // <Message error>
-    //   {errors && (
-    //     <Message.List>
-    //       {errors.map((err: any, i: any) => (
-    //         <Message.Item key={i}>{err}</Message.Item>
-    //       ))}
-    //     </Message.List>
-    //   )}
-    // </Message>
     <>
       <div
-        className="bg-red-100 border-l-4 border-red-500 text-gray-700 p-3 mb-2 capitalize"
+        className="bg-red-100 border-l-4 border-red-500 text-red-700 text-left p-3 mb-2 capitalize"
         role="alert"
       >
         {errors.map((err: string, i: any) => {
           console.log(err);
 
-          <label
-            key={i}
-            className="font-bold text-md mb-2 text-left text-gray-700"
-          >
-            {err}
-          </label>;
+          return (
+            <label
+              key={i}
+              className="font-bold text-md mb-2 text-left text-red-700"
+            >
+              {err}
+            </label>
+          );
         })}
       </div>
     </>
