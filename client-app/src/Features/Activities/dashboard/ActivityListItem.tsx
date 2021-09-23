@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Activity } from "../../../App/Models/activity";
 import { format } from "date-fns";
+import ActivityListItemAttendee from "./ActivityListItemAttendee";
 interface Props {
   activity: Activity;
 }
@@ -17,14 +18,19 @@ export default function ActivityListItem({ activity }: Props) {
       </div>
       <div>
         <h2 className="text-gray-800 text-3xl font-semibold capitalize">
+          {activity.host?.displayName}
+        </h2>
+        <h2 className="text-gray-800 text-xl font-semibold capitalize">
           {activity.title}
         </h2>
         <p className="text-gray-500 text-sm capitalize">
-          {format(activity.date!, "dd MMM yyyy h:mm aa")}{" "}
+          {format(activity.date!, "dd MMM yyyy h:mm aa")}
+          {}
         </p>
         <p className="mt-2 text-gray-600">{activity.description}</p>
       </div>
-      <div className="flex justify-end mt-4">
+      <div className="flex flex-row justify-between mt-4">
+        <ActivityListItemAttendee attendees={activity.attendees!} />
         <Link
           to={`/activities/${activity.id}`}
           className="text-xl font-medium text-gray-500"
