@@ -2,6 +2,7 @@ import { format } from "date-fns";
 import { makeAutoObservable, runInAction } from "mobx";
 import agents from "../api/agent";
 import { Activity } from "../Models/activity";
+import { Profile } from "../Models/profile";
 import { store } from "./store";
 
 export default class ActivityStore {
@@ -148,5 +149,34 @@ export default class ActivityStore {
 
   private getActivity = (id: string) => {
     return this.activityRegistry.get(id);
+  };
+
+  updateAttendence = async () => {
+    const user = store.userStore.user;
+    this.loading = true;
+    try {
+      await agents.Activities.attend(this.selectedActivity!.id);
+      runInAction(() => {
+        if (this.selectedActivity?.isGoing) {
+          this.selectedActivity.attendees =
+            this.selectedActivity.attendees?.filter(
+              (a) => a.username !== user?.username
+            );
+          this.selectedActivity.isGoing = false;
+        } else {
+          const attendee = new Profile(user!);
+          this.selectedActivity?.attendees?.push(attendee);
+          this.selectedActivity!.isGoing = true;
+        }
+        this.activityRegistry.set(
+          this.selectedActivity!.id,
+          this.selectedActivity!
+        );
+      });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      runInAction(() => (this.loading = false));
+    }
   };
 }

@@ -25,7 +25,6 @@ export default function ActivityListItem({ activity }: Props) {
         </h2>
         <p className="text-gray-500 text-sm capitalize">
           {format(activity.date!, "dd MMM yyyy h:mm aa")}
-          {}
         </p>
         <p className="mt-2 text-gray-600">{activity.description}</p>
       </div>
