@@ -13,7 +13,7 @@ export default function ActivityListItem({ activity }: Props) {
       <div className="flex justify-center md:justify-end -mt-16">
         <img
           className="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
-          src="/assets/user.png"
+          src={activity.host?.image ? activity.host?.image : "/assets/user.png"}
         />
       </div>
       <div>

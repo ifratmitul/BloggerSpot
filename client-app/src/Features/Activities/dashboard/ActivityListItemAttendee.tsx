@@ -11,19 +11,20 @@ interface Props {
 function ActivityListItemAttendee({ attendees }: Props) {
   return (
     <div className="flex flex-row">
-      {attendees.map((attendees) => (
-        <List.Item
-          key={attendees.username}
-          as={Link}
-          to={`/profiles/${attendees.username}`}
-        >
-          <Image
-            size="mini"
-            circular
-            src={attendees.image || "/assets/user.png"}
-          />
-        </List.Item>
-      ))}
+      {attendees &&
+        attendees.map((attendees) => (
+          <List.Item
+            key={attendees.username}
+            as={Link}
+            to={`/profiles/${attendees.username}`}
+          >
+            <Image
+              size="mini"
+              circular
+              src={attendees.image || "/assets/user.png"}
+            />
+          </List.Item>
+        ))}
     </div>
   );
 }
