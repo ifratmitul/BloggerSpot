@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,6 +35,8 @@ namespace Application.Photos
             {
                 var user = await _context.Users.Include(p => p.Photos)
                 .FirstOrDefaultAsync(x => x.UserName == _userAccessor.GetUserName());
+
+                Console.WriteLine(user);
 
                 if (user == null) return null;
 

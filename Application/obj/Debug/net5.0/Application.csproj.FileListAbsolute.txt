@@ -10,7 +10,6 @@
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.AssemblyInfoInputs.cache
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.AssemblyInfo.cs
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.csproj.CoreCompileInputs.cache
-/home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.csproj.CopyComplete
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.dll
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/ref/Application.dll
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.pdb

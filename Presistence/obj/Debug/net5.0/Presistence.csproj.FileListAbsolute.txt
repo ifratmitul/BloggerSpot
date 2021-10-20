@@ -8,7 +8,6 @@
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.AssemblyInfoInputs.cache
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.AssemblyInfo.cs
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.csproj.CoreCompileInputs.cache
-/home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.csproj.CopyComplete
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.dll
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/ref/Presistence.dll
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.pdb

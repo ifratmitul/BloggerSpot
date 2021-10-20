@@ -27,7 +27,6 @@
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/staticwebassets/API.StaticWebAssets.xml
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/scopedcss/bundle/API.styles.css
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.RazorTargetAssemblyInfo.cache
-/home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.csproj.CopyComplete
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.dll
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/ref/API.dll
 /home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.pdb
@@ -86,3 +85,4 @@
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/CloudinaryDotNet.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Microsoft.Extensions.WebEncoders.dll
 /home/mitul/BloggerSpot/API/bin/Debug/net5.0/Newtonsoft.Json.dll
+/home/mitul/BloggerSpot/API/obj/Debug/net5.0/API.csproj.CopyComplete
