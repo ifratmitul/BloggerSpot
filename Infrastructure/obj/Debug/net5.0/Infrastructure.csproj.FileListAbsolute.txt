@@ -16,3 +16,4 @@
 /home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/Infrastructure.dll
 /home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/ref/Infrastructure.dll
 /home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/Infrastructure.pdb
+/home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/Infrastructure.csproj.CopyComplete

@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { Grid } from "semantic-ui-react";
 import LoadingComponent from "../../../../App/Layout/LoadingComponent";
 import { useStore } from "../../../../App/stores/store";
+import ActivityDetailedChat from "./ActivityDetailedChat";
 import ActivityDetailedSidebar from "./ActivityDetailedSidebar";
 import ActivityDetailsHeader from "./ActivityDetailsHeader";
 import ActivityDetailsInfo from "./ActivityDetailsInfo";
@@ -28,6 +29,7 @@ export default observer(function ActivityDetails() {
       <Grid.Column width={10}>
         <ActivityDetailsHeader activity={activity} />
         <ActivityDetailsInfo activity={activity} />
+        <ActivityDetailedChat activityId={activity.id} />
       </Grid.Column>
 
       <Grid.Column width={6}>

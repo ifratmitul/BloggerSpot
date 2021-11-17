@@ -12,3 +12,4 @@
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/ref/Presistence.dll
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.pdb
 /home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.csproj.AssemblyReference.cache
+/home/mitul/BloggerSpot/Presistence/obj/Debug/net5.0/Presistence.csproj.CopyComplete
