@@ -9,6 +9,10 @@ interface Props {
 }
 
 function ActivityListItemAttendee({ attendees }: Props) {
+  const styles = {
+    borderColor: "orange",
+    borderWidth: 2,
+  };
   return (
     <div className="flex flex-row">
       {attendees &&
@@ -21,6 +25,8 @@ function ActivityListItemAttendee({ attendees }: Props) {
             <Image
               size="mini"
               circular
+              bordered
+              style={attendees.following ? styles : null}
               src={attendees.image || "/assets/user.png"}
             />
           </List.Item>
