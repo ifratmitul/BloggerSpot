@@ -1,6 +1,5 @@
 /home/mitul/BloggerSpot/Infrastructure/bin/Debug/net5.0/Infrastructure.deps.json
 /home/mitul/BloggerSpot/Infrastructure/bin/Debug/net5.0/Infrastructure.dll
-/home/mitul/BloggerSpot/Infrastructure/bin/Debug/net5.0/ref/Infrastructure.dll
 /home/mitul/BloggerSpot/Infrastructure/bin/Debug/net5.0/Infrastructure.pdb
 /home/mitul/BloggerSpot/Infrastructure/bin/Debug/net5.0/Application.dll
 /home/mitul/BloggerSpot/Infrastructure/bin/Debug/net5.0/Domain.dll
@@ -17,3 +16,4 @@
 /home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/ref/Infrastructure.dll
 /home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/Infrastructure.pdb
 /home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/Infrastructure.csproj.CopyComplete
+/home/mitul/BloggerSpot/Infrastructure/obj/Debug/net5.0/refint/Infrastructure.dll

@@ -1,6 +1,5 @@
 /home/mitul/BloggerSpot/Application/bin/Debug/net5.0/Application.deps.json
 /home/mitul/BloggerSpot/Application/bin/Debug/net5.0/Application.dll
-/home/mitul/BloggerSpot/Application/bin/Debug/net5.0/ref/Application.dll
 /home/mitul/BloggerSpot/Application/bin/Debug/net5.0/Application.pdb
 /home/mitul/BloggerSpot/Application/bin/Debug/net5.0/Domain.dll
 /home/mitul/BloggerSpot/Application/bin/Debug/net5.0/Presistence.dll
@@ -15,3 +14,4 @@
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.pdb
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.csproj.AssemblyReference.cache
 /home/mitul/BloggerSpot/Application/obj/Debug/net5.0/Application.csproj.CopyComplete
+/home/mitul/BloggerSpot/Application/obj/Debug/net5.0/refint/Application.dll

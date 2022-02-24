@@ -16,7 +16,8 @@ import LoginForm from "../../Features/users/LoginForm";
 import { useStore } from "../stores/store";
 import LoadingComponent from "./LoadingComponent";
 import ModalContainer from "../common/modals/ModalContainer";
-import Profile from "../../Features/Profile/profile";
+import ProfilePage from "../../Features/profiles/ProfilePage";
+
 function App() {
   const location = useLocation();
   const { commonStore, userStore, activityStore } = useStore();
@@ -50,7 +51,11 @@ function App() {
                   path={["/createActivity", "/manage/:id"]}
                   component={ActivityForm}
                 />
-                <Route exact path="/profile/:username" component={Profile} />
+                <Route
+                  exact
+                  path="/profile/:username"
+                  component={ProfilePage}
+                />
                 <Route path="/errors" component={TestErrors} />
                 <Route path="/server-error" component={ServerError} />
                 <Route path="/login" component={LoginForm} />

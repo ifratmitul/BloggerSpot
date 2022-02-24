@@ -1,12 +1,10 @@
 import { observer } from "mobx-react-lite";
 import React from "react";
 import {
-  Button,
   Divider,
   Grid,
   Header,
   Item,
-  Reveal,
   Segment,
   Statistic,
 } from "semantic-ui-react";
@@ -18,8 +16,6 @@ interface Props {
 }
 
 export default observer(function ProfileHeader({ profile }: Props) {
-  console.log(profile);
-
   return (
     <Segment>
       <Grid>

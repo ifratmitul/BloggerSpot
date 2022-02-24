@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import React, { SyntheticEvent } from "react";
-import { Button, Reveal } from "semantic-ui-react";
+import { Reveal, Button } from "semantic-ui-react";
 import { Profile } from "../../App/Models/profile";
 import { useStore } from "../../App/stores/store";
 
@@ -11,6 +11,7 @@ interface Props {
 export default observer(function FollowButton({ profile }: Props) {
   const { profileStore, userStore } = useStore();
   const { updateFollowing, loading } = profileStore;
+
   if (userStore.user?.username === profile.username) return null;
 
   function handleFollow(e: SyntheticEvent, username: string) {
@@ -26,7 +27,7 @@ export default observer(function FollowButton({ profile }: Props) {
         <Button
           fluid
           color="teal"
-          content={profile.following ? "Following" : "Not Following"}
+          content={profile.following ? "Following" : "Not following"}
         />
       </Reveal.Content>
       <Reveal.Content hidden style={{ width: "100%" }}>

@@ -105,6 +105,8 @@ const Profiles = {
     request.post(`/follow/${username}`, {}),
   listFollowing: (username: string, predicate: string) =>
     request.get<Profile[]>(`/follow/${username}?predicate=${predicate}`),
+  listActivities: (username: string, predicate: string) =>
+    request.get<any>(`/profiles/${username}/activities?predicate=${predicate}`),
 };
 
 const agents = {

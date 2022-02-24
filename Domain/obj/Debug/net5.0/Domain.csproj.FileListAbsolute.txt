@@ -1,6 +1,5 @@
 /home/mitul/BloggerSpot/Domain/bin/Debug/net5.0/Domain.deps.json
 /home/mitul/BloggerSpot/Domain/bin/Debug/net5.0/Domain.dll
-/home/mitul/BloggerSpot/Domain/bin/Debug/net5.0/ref/Domain.dll
 /home/mitul/BloggerSpot/Domain/bin/Debug/net5.0/Domain.pdb
 /home/mitul/BloggerSpot/Domain/obj/Debug/net5.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
 /home/mitul/BloggerSpot/Domain/obj/Debug/net5.0/Domain.AssemblyInfoInputs.cache
@@ -10,3 +9,4 @@
 /home/mitul/BloggerSpot/Domain/obj/Debug/net5.0/ref/Domain.dll
 /home/mitul/BloggerSpot/Domain/obj/Debug/net5.0/Domain.pdb
 /home/mitul/BloggerSpot/Domain/obj/Debug/net5.0/Domain.csproj.AssemblyReference.cache
+/home/mitul/BloggerSpot/Domain/obj/Debug/net5.0/refint/Domain.dll
